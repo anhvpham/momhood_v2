@@ -1,0 +1,19 @@
+// A mixins is a way of encapsulating a section of code and
+//reusing it in other parts of the stylesheet
+
+@mixin theme($color) {
+
+  color: darken($color, 20%);
+  border: 3px solid lighten($color, 30%);
+
+  font-family: sans-serif;
+  background-color: white;
+}
+
+// Use a mixin to set a max-width and margin auto
+// Use this mixin to apply these styles to the header and the main elements
+
+@mixin center-content {
+  max-width: $site-width;
+  margin: auto;
+}

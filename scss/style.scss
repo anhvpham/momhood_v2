@@ -1,0 +1,21 @@
+// We use style.scss to import all our patials files
+
+// import header file _header.scss, no underscore, no file ectension
+
+@import "partials/variables";
+
+@import "partials/mixins";
+
+@import "partials/header";
+
+@import "partials/features";
+
+@import "partials/updated";
+
+@import "partials/member";
+
+@import "partials/screenshot";
+
+@import "partials/contact";
+
+@import "partials/footer";

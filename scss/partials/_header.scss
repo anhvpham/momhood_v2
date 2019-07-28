@@ -1,0 +1,162 @@
+// This stylesheet controls the header
+
+nav {
+	display: none;
+}
+
+.hero {
+	.phone {
+		display: none;
+	}
+}
+
+.hero {
+	background-image: url(../images/hero.jpg);
+	background-repeat: repeat;
+	width: auto;
+	box-shadow: 1px 2px 5px rgba(0, 0, 0, .3);
+
+	@media screen and (max-width:800px) {
+		padding: 2rem;
+		text-align: center;
+
+		.tagline {
+			font-size: 2rem;
+			margin-bottom: 0;
+		}
+
+		.logo_mobile {
+			display: inline-block;
+			width: 150px;
+			height: auto;
+			margin-right: 0;
+		}
+	}
+
+}
+
+//desktop
+@media screen and (min-width:800px) {
+	header {
+
+		nav {
+			display: block;
+			box-shadow: 1px 2px 5px rgba(0, 0, 0, .3);
+			position: fixed;
+			width: 100%;
+			top: 0;
+			background: white;
+			z-index: 99;
+
+			ul {
+				margin: 0 0 0 5rem;
+
+				display: grid;
+				grid-template-columns: repeat(5, max-content);
+				grid-column-gap: 5rem;
+
+				position: relative;
+
+
+				li {
+					list-style-type: none;
+					margin-top: .7rem;
+					margin-bottom: .5rem;
+
+					&:not(:first-of-type) {
+						padding-top: .5rem;
+					}
+
+					a{
+						color: #383838;
+					  font-family: 'Montserrat', sans-serif;
+						font-weight: 600;
+						text-decoration: none;
+
+						&:hover {
+							color: $color-purple;
+						}
+
+						img{
+							width: 60px;
+							height:auto;
+						}
+					}//a
+				}//li
+
+				.bt_contact {
+					background-color: white;
+					color: $color-purple;
+					border-radius: 15px;
+					border-color: $color-purple;
+					border-width: medium;
+					padding: 0.5rem 1rem;
+					height: 40px;
+
+					font-size: 1rem;
+					font-family: 'Montserrat', sans-serif;
+					font-weight: 700;
+					letter-spacing: 0.5px;
+					box-shadow: 1px 2px 5px rgba(0, 0, 0, .3);
+
+					margin-top: .7rem;
+					margin-bottom: .5rem;
+
+					position: absolute;
+					right: 5rem;
+
+					&:hover {
+						background-color: $color-purple;
+						color: white;
+					}
+				}
+
+			}//ul
+		}//nav
+
+		.hero {
+			background-image: url(../images/hero.jpg);
+			background-repeat: repeat;
+			height: calc(100vh - 30px);
+			width: auto;
+			box-shadow: 1px 2px 5px rgba(0, 0, 0, .3);
+
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			overflow: hidden;
+
+			.logo_mobile {
+				display: none;
+			}
+
+			.phone {
+				display: block;
+				grid-column: 2/3;
+				justify-self: center;
+				align-self: flex-end;
+			}
+
+			.hero_content {
+
+				position: relative;
+				margin-left: 7rem;
+				grid-column: 1/2;
+				align-self: center;
+
+				img {
+					//position: absolute;
+					right: 50vw;
+					margin-top: 3rem;
+				}
+
+				.tagline {
+					font-size: 3rem;
+					font-weight: 600;
+					margin-bottom: 1.5rem;
+				}
+
+			}//hero_content
+		}//hero
+
+	}// header
+}//media
